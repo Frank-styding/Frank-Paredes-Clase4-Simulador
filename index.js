@@ -7,6 +7,9 @@ function calcularCuota(monto, numeroDeCuotas, interes) {
 function digitoESC(texto) {
   return texto.toLowerCase() == "esc";
 }
+function digitoSi(text) {
+  return text.toLowerCase() == "si";
+}
 
 while (true) {
   alert("Calcular cuotas");
@@ -19,6 +22,9 @@ while (true) {
 
   let interes = prompt("Digite el interes");
   if (digitoESC(interes)) break;
+
+  let salir = prompt("Desea salir");
+  if (digitoSi(salir)) break;
 
   alert(calcularCuota(+monto, +numeroDeCuotas, +interes));
 }
