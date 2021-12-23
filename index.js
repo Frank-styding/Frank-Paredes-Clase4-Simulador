@@ -23,8 +23,8 @@ while (true) {
   let interes = prompt("Digite el interes");
   if (digitoESC(interes)) break;
 
+  alert(calcularCuota(+monto, +numeroDeCuotas, +interes));
+
   let salir = prompt("Desea salir");
   if (digitoSi(salir)) break;
-
-  alert(calcularCuota(+monto, +numeroDeCuotas, +interes));
 }
