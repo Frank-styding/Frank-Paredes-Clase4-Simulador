@@ -31,6 +31,7 @@ while (!salir) {
     !esPositivo(interes)
   ) {
     alert("Los datos de entrada no pueden ser negativos");
+    salir = true;
     break;
   }
 
