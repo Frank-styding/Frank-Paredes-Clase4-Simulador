@@ -16,8 +16,9 @@ function digitoSi(text) {
 let monto;
 let numeroDeCuotas;
 let interes;
+let salir = false;
 
-while (interes != 0) {
+while (!salir) {
   alert("Calcular cuotas");
 
   monto = +prompt("Digite el monto");
@@ -35,8 +36,10 @@ while (interes != 0) {
 
   alert(calcularCuota(monto, numeroDeCuotas, interes));
 
-  let salir = prompt("Desea salir");
-  if (digitoSi(salir)) break;
+  let entrada = prompt("Desea salir");
+  if (digitoSi(entrada)) {
+    salir = true;
+  }
 }
 if (interes == 0) {
   alert("El interest no puede ser 0");
