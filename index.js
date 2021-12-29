@@ -1,4 +1,5 @@
 function calcularCuota(monto, numeroDeCuotas, interes) {
+  interes = interes / 100;
   let aux = Math.pow(1 + interes, numeroDeCuotas);
   let cuota = monto * ((aux * interes) / (aux - 1));
   cuota = Math.floor(cuota * 10) / 10;
